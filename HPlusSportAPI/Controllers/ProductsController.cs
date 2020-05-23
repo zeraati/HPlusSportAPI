@@ -11,5 +11,10 @@ namespace HPlusSportAPI.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
+        [HttpGet]
+        public string GetProducts()
+        {
+            return "OK!";
+        }
     }
 }
