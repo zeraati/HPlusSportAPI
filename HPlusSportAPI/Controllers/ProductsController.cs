@@ -28,10 +28,13 @@ namespace HPlusSportAPI.Controllers
             return Ok(_context.Products.ToList());
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public IActionResult GetProduct(int id)
         {
             var product = _context.Products.Find(id);
+
+            if (product is null) return NotFound();
+
             return Ok(product);
         }
     }
