@@ -8,7 +8,7 @@ namespace HPlusSportAPI.Models
 {
     public class ShopContext:DbContext
     {
-        ShopContext(DbContextOptions<ShopContext> options) : base(options)
+        public ShopContext(DbContextOptions<ShopContext> options) : base(options)
         {
 
         }
